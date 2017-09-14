@@ -31,10 +31,11 @@
 .container {
   position: relative;
   width: 100%;
-  max-width: 960px;
+  max-width: 1020px;
   margin: 0 auto;
   padding: 0 20px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  min-height:100% }
 .column,
 .columns {
   width: 100%;
@@ -119,14 +120,17 @@
 html is set to 62.5% so that all the REM measurements throughout Skeleton
 are based on 10px sizing. So basically 1.5rem = 15px :) */
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  min-height: 100%; }
 body {
+  min-height: 100%;
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
   font-family:"Open Sans", sans-serif;
-  color: #222;
-  background-color: mistyrose;
+  color: rgba(255,255,255,0.9);
+  /*background-color: mistyrose;*/
+  background-image: linear-gradient(120deg, #FFC3A0 0%, #EF32D9 100%);
 }
 
 
@@ -150,7 +154,7 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
   h2 { font-size: 4.2rem; }
   h3 { font-size: 3.6rem; }
   h4 { font-size: 3.0rem; }
-  h5 { font-size: 2.4rem; }
+  h5 { font-size: 2rem; }
   h6 { font-size: 1.5rem; }
 }
 
@@ -161,14 +165,11 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-  font-weight: 600;}
-a:hover {
-  color: #000;
+  color: rgba(255,255,255,0.9);
   text-decoration: underline;
-  font-weight:600;}
+  cursor: pointer;
+  font-weight: 400;}
+
 
 
 /* Buttons
@@ -427,10 +428,27 @@ there.
 
 /* My edit */
 
+header{
+  margin-top: 20%;
+}
+
 .title{
-  margin-top: 25%;
+  color: #fff;
+}
+
+.content{
+  padding-top: 140px;
+  text-align: center;
+}
+
+@media (min-width: 550px) {
+.content{
+  text-align: right;
+  padding-top: 35px;
+}
 }
 
 .social-media{
   margin-top: 35px;
+  letter-spacing: 0.8px;
 }
