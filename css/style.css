@@ -448,6 +448,9 @@ header{
 }
 }
 
+.logo-venusfly{
+  min-width: 200px;
+}
 .social-media{
   margin-top: 35px;
   letter-spacing: 0.8px;
