@@ -129,8 +129,11 @@ body {
   font-weight: 400;
   font-family:"Open Sans", sans-serif;
   color: rgba(255,255,255,0.9);
-  /*background-color: mistyrose;*/
-  background-image: linear-gradient(120deg, #FFC3A0 0%, #EF32D9 100%);
+  background-color: #111;
+  -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -moz-font-feature-settings: "liga" on;
 }
 
 
@@ -207,7 +210,8 @@ input[type="submit"]:focus,
 input[type="reset"]:focus,
 input[type="button"]:focus {
   color: #333;
-  border-color: #888;
+  border-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
   outline: 0; }
 .button.button-primary,
 button.button-primary,
@@ -428,30 +432,96 @@ there.
 
 /* My edit */
 
-header{
-  margin-top: 20%;
+.wrapper{
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+  grid-auto-rows: auto;
+  overflow: hidden;
+  align-content: end;
 }
 
-.title{
-  color: #fff;
+@media (min-width: 940px) {
+.wrapper img{
+  width: 100%;
+  height: auto;
+}
 }
 
-.content{
-  padding-top: 100px;
-  text-align: center;
+.intro{
+  position: absolute;
+  top: 4%;
+  right:8%;
+  bottom: 4%;
+  left: 8%;
+  background-image: linear-gradient(120deg, #0000FF 0%, #EF32D9 100%);
+  padding:30px;
 }
 
-@media (min-width: 550px) {
-.content{
-  text-align: right;
-  padding-top: 35px;
-}
+@media (min-width: 940px) {
+  .intro{
+    top: 20%;
+    right:30%;
+    bottom: 20%;
+    left: 30%;
+  }
 }
 
 .logo-venusfly{
-  min-width: 200px;
+  margin: 30px;
+}
+
+@media (min-width: 740px) {
+  .logo-venusfly{
+    margin: 40px 120px;
+    padding-top: 10px;
+  }
+}
+
+.text-center{
+  text-align: center;
+}
+
+.button-group{
+  margin: 0 auto;
+}
+
+@media (min-width: 440px) {
+.button-group :last-child{
+  margin-left: 10px;
+}
+}
+
+.action{
+  color: #FFF;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 150px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.action:hover{
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  color: #333;
+}
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin-top: 10px;
+  border-top: 1px solid rgba(0,0,0,0.7);
+  padding: 5px;
 }
 .social-media{
-  margin-top: 35px;
   letter-spacing: 0.8px;
+  margin: 10px;
+  text-decoration: none;
+}
+
+.social-media:hover{
+  text-decoration: underline;
 }
